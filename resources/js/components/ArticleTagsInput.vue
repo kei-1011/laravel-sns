@@ -9,6 +9,7 @@
       v-model="tag"
       :tags="tags"
       placeholder="タグを5個まで入力できます"
+      :add-on-key="[13, 32]"
       :autocomplete-items="filteredItems"
       @tags-changed="newTags => tags = newTags"
     />
