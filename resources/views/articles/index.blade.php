@@ -12,5 +12,4 @@
 
     @endforeach
   </div>
-  @include('footer')
 @endsection

@@ -60,7 +60,7 @@
       </a>
     </h3>
     <div class="card-text">
-      {{ $article->body }}
+      {!! nl2br(e($article->body)) !!}
     </div>
   </div>
   <div class="card-body pt-0 pb-2 pl-3">
