@@ -42,7 +42,7 @@ class ArticleController extends Controller {
         $article->save();
 
         //コレクションの各要素に対して順に処理
-        $request->tags->each(function($tagName) use ($article) {
+        $request->tags->each(function ($tagName) use ($article) {
             $tag = Tag::firstOrCreate(['name' => $tagName]);
             $article->tags()->attach($tag);
         });
