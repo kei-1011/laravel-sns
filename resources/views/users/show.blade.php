@@ -47,7 +47,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link text-muted"
-           href="">
+           href="{{ route('users.likes', ['name' => $user->name]) }}">
           いいね
         </a>
       </li>
