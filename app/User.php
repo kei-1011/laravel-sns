@@ -69,4 +69,14 @@ class User extends Authenticatable
     {
         return $this->BelongsToMany('App\User','follows','follower_id','followee_id')->withTimestamps();
     }
+
+    public function getCountFollowersAttribute(): int
+    {
+        return $this->followers->count();
+    }
+
+    public function getCountFollowingsAttribute(): int
+    {
+        return $this->followings->count();
+    }
 }
