@@ -60,4 +60,13 @@ class User extends Authenticatable
         ? (bool)$this->followers->where('id',$user->id)->count()
         :false;
     }
+
+    /**
+     * これからフォローするユーザー
+     * フォロー中のユーザーのモデルにアクセスするためのリレーション
+     */
+    public function followings(): BelongsToMany
+    {
+        return $this->BelongsToMany('App\User','follows','follower_id','followee_id')->withTimestamps();
+    }
 }
