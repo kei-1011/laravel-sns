@@ -14,7 +14,7 @@
             @include('error_card_list')
             <div class="card-text">
               <form method="POST"
-                action="">
+              action="{{ route('register.{provider}', ['provider' => $provider]) }}">
                 @csrf
                 <input type="hidden" name="token" value="{{ $token }}">
                 <div class="md-form">
